@@ -78,13 +78,13 @@ VITE_API_BASE=https://onefi-assignment.onrender.com
 ### Run frontend locally:
 npm run dev
 
-### API Endpoints
+## API Endpoints
 Method	Endpoint	Description
 GET	/api/products	Fetch all products
 GET	/api/products/:slug	Fetch one product with variants and EMI plans
 
 
-### Database Schema
+## Database Schema
 Product Schema
 {
   name: String,
@@ -110,14 +110,14 @@ EmiPlan Schema
   cashback: Number
 }
 
-### Seed Data
+## Seed Data
 The seed script is located at:
 server/seed.js
 
 To re-seed:
 node seed.js
 
-### Features
+## Features
 Clean and minimal UI
 
 Product listing with variant options
@@ -130,6 +130,6 @@ Fully responsive layout
 
 API-driven data
 
-### Author
+## Author
 Developed by Praveen Kumar
 Frontend & Full Stack Developer (React, Node.js, MongoDB)
