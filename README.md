@@ -51,74 +51,41 @@ onefi-assignment/
 ## ⚙️ Setup & Run Instructions
 
 ### 1. Clone the Repository
-```bash
 git clone https://github.com/<your-username>/onefi-emi-store.git
 cd onefi-emi-store
 
-## Backend Setup
-```bash
+### Backend Setup
 cd server
 npm install
-Create a .env file inside server/ and add:
 
-ini
-Copy code
+### Create a .env file inside server/ and add:
 MONGO_URI=your-mongodb-atlas-uri
 PORT=5000
-Seed the database:
 
-bash
-Copy code
+### Seed the database:
 node seed.js
-Start backend:
 
-bash
-Copy code
+### Start backend:
 node index.js
-Frontend Setup
-bash
-Copy code
+
+### Frontend Setup
 cd ../client
 npm install
-Create a .env file inside client/:
 
-ini
-Copy code
+### Create a .env file inside client/:
 VITE_API_BASE=https://onefi-assignment.onrender.com
-Run frontend locally:
 
-bash
-Copy code
+### Run frontend locally:
 npm run dev
-API Endpoints
+
+### API Endpoints
 Method	Endpoint	Description
 GET	/api/products	Fetch all products
 GET	/api/products/:slug	Fetch one product with variants and EMI plans
 
-Example Response (Shortened)
-json
-Copy code
-{
-  "name": "Bose QuietComfort Ultra",
-  "brand": "Bose",
-  "baseSlug": "bose-qc-ultra",
-  "variants": [
-    {
-      "name": "Black",
-      "slug": "black",
-      "price": 33500,
-      "mrp": 38500,
-      "emiPlans": [
-        { "monthly": 1395, "tenureMonths": 24, "interestRate": 0, "cashback": 750 },
-        { "monthly": 3800, "tenureMonths": 12, "interestRate": 11 }
-      ]
-    }
-  ]
-}
-Database Schema
+
+### Database Schema
 Product Schema
-js
-Copy code
 {
   name: String,
   brand: String,
@@ -127,8 +94,6 @@ Copy code
   variants: [VariantSchema]
 }
 Variant Schema
-js
-Copy code
 {
   name: String,
   slug: String,
@@ -138,26 +103,21 @@ Copy code
   emiPlans: [EmiPlanSchema]
 }
 EmiPlan Schema
-js
-Copy code
 {
   monthly: Number,
   tenureMonths: Number,
   interestRate: Number,
   cashback: Number
 }
-Seed Data
+
+### Seed Data
 The seed script is located at:
-
-bash
-Copy code
 server/seed.js
-To re-seed:
 
-bash
-Copy code
+To re-seed:
 node seed.js
-Features
+
+### Features
 Clean and minimal UI
 
 Product listing with variant options
@@ -170,21 +130,6 @@ Fully responsive layout
 
 API-driven data
 
-Demo Video (Will be Added)
-A short 2–5 min video demonstrating:
-
-UI flow
-
-Backend and API requests
-
-MongoDB database data structure
-
-bash
-Copy code
-<video link will be placed here>
-Author
+### Author
 Developed by Praveen Kumar
 Frontend & Full Stack Developer (React, Node.js, MongoDB)
-
-yaml
-Copy code
