@@ -83,6 +83,25 @@ Method	Endpoint	Description
 GET	/api/products	Fetch all products
 GET	/api/products/:slug	Fetch one product with variants and EMI plans
 
+Example Response (Shortened)
+{
+  "name": "Bose QuietComfort Ultra",
+  "brand": "Bose",
+  "baseSlug": "bose-qc-ultra",
+  "variants": [
+    {
+      "name": "Black",
+      "slug": "black",
+      "price": 33500,
+      "mrp": 38500,
+      "emiPlans": [
+        { "monthly": 1395, "tenureMonths": 24, "interestRate": 0, "cashback": 750 },
+        { "monthly": 3800, "tenureMonths": 12, "interestRate": 11 }
+      ]
+    }
+  ]
+}
+
 
 ## Database Schema
 Product Schema
