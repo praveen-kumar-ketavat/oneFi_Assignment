@@ -29,3 +29,162 @@ This project is built as part of the **SDE-1 Full Stack Assignment for 1Fi**.
 
 ## 📂 Project Structure
 
+onefi-assignment/
+│
+├─ client/ # React Frontend
+│ ├─ src/
+│ ├─ public/
+│ └─ vite.config.js
+│
+├─ server/ # Express + MongoDB Backend
+│ ├─ models/
+│ │ └─ Product.js
+│ ├─ seed.js # Database Seeder Script
+│ ├─ index.js # API Server
+│ └─ .env # Environment Variables (not committed)
+│
+└─ README.md
+
+
+---
+
+## ⚙️ Setup & Run Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/onefi-emi-store.git
+cd onefi-emi-store
+
+## Backend Setup
+```bash
+cd server
+npm install
+Create a .env file inside server/ and add:
+
+ini
+Copy code
+MONGO_URI=your-mongodb-atlas-uri
+PORT=5000
+Seed the database:
+
+bash
+Copy code
+node seed.js
+Start backend:
+
+bash
+Copy code
+node index.js
+Frontend Setup
+bash
+Copy code
+cd ../client
+npm install
+Create a .env file inside client/:
+
+ini
+Copy code
+VITE_API_BASE=https://onefi-assignment.onrender.com
+Run frontend locally:
+
+bash
+Copy code
+npm run dev
+API Endpoints
+Method	Endpoint	Description
+GET	/api/products	Fetch all products
+GET	/api/products/:slug	Fetch one product with variants and EMI plans
+
+Example Response (Shortened)
+json
+Copy code
+{
+  "name": "Bose QuietComfort Ultra",
+  "brand": "Bose",
+  "baseSlug": "bose-qc-ultra",
+  "variants": [
+    {
+      "name": "Black",
+      "slug": "black",
+      "price": 33500,
+      "mrp": 38500,
+      "emiPlans": [
+        { "monthly": 1395, "tenureMonths": 24, "interestRate": 0, "cashback": 750 },
+        { "monthly": 3800, "tenureMonths": 12, "interestRate": 11 }
+      ]
+    }
+  ]
+}
+Database Schema
+Product Schema
+js
+Copy code
+{
+  name: String,
+  brand: String,
+  baseSlug: String,
+  description: String,
+  variants: [VariantSchema]
+}
+Variant Schema
+js
+Copy code
+{
+  name: String,
+  slug: String,
+  price: Number,
+  mrp: Number,
+  image: String,
+  emiPlans: [EmiPlanSchema]
+}
+EmiPlan Schema
+js
+Copy code
+{
+  monthly: Number,
+  tenureMonths: Number,
+  interestRate: Number,
+  cashback: Number
+}
+Seed Data
+The seed script is located at:
+
+bash
+Copy code
+server/seed.js
+To re-seed:
+
+bash
+Copy code
+node seed.js
+Features
+Clean and minimal UI
+
+Product listing with variant options
+
+EMI comparison between plans
+
+Final checkout summary screen
+
+Fully responsive layout
+
+API-driven data
+
+Demo Video (Will be Added)
+A short 2–5 min video demonstrating:
+
+UI flow
+
+Backend and API requests
+
+MongoDB database data structure
+
+bash
+Copy code
+<video link will be placed here>
+Author
+Developed by Praveen Kumar
+Frontend & Full Stack Developer (React, Node.js, MongoDB)
+
+yaml
+Copy code
