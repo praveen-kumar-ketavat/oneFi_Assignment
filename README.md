@@ -12,7 +12,7 @@ This project is built as part of the **SDE-1 Full Stack Assignment for 1Fi**.
 |--------|-----|
 | **Frontend (Vercel)** | https://one-fi-assignment.vercel.app |
 | **Backend (Render)** | https://onefi-assignment.onrender.com |
-| **Demo Video** | https://drive.google.com/drive/folders/1omPJoti8DZ6v2OJO8W6e7GmCVDQEzv60?usp=sharing |
+| **Demo Video** | https://drive.google.com/file/d/1EZP9L6E8gUWukKiod6as4EB6QXqPEX71/view?usp=drive_link |
 
 ---
 
