@@ -80,27 +80,14 @@ npm run dev
 
 ## API Endpoints
 Method	Endpoint	Description
-GET	/api/products	Fetch all products
-GET	/api/products/:slug	Fetch one product with variants and EMI plans
 
-Example Response (Shortened)
-{
-  "name": "Bose QuietComfort Ultra",
-  "brand": "Bose",
-  "baseSlug": "bose-qc-ultra",
-  "variants": [
-    {
-      "name": "Black",
-      "slug": "black",
-      "price": 33500,
-      "mrp": 38500,
-      "emiPlans": [
-        { "monthly": 1395, "tenureMonths": 24, "interestRate": 0, "cashback": 750 },
-        { "monthly": 3800, "tenureMonths": 12, "interestRate": 11 }
-      ]
-    }
-  ]
-}
+https://onefi-assignment.onrender.com/api/products
+https://onefi-assignment.onrender.com/api/products/airpods-pro-2
+https://onefi-assignment.onrender.com/api/products/sony-wh-1000xm5
+https://onefi-assignment.onrender.com/api/products/bose-qc-ultra
+
+Example Response 
+{"_id":"690df65a321a09cf16af0064","name":"Bose QuietComfort Ultra","brand":"Bose","baseSlug":"bose-qc-ultra","description":"Immersive audio with adaptive ANC and premium build.","variants":[{"name":"Black","slug":"black","price":33500,"mrp":38500,"image":"/images/bose-qc-ultra-black.jpg","emiPlans":[{"monthly":1395,"tenureMonths":24,"interestRate":0,"cashback":750},{"monthly":3800,"tenureMonths":12,"interestRate":11,"cashback":0}]},{"name":"White Smoke","slug":"white-smoke","price":33500,"mrp":38500,"image":"/images/bose-qc-ultra-white-smoke.avif","emiPlans":[{"monthly":1395,"tenureMonths":24,"interestRate":0,"cashback":0},{"monthly":3850,"tenureMonths":12,"interestRate":11.5,"cashback":0}]}],"__v":0}
 
 
 ## Database Schema
